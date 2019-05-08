@@ -37,7 +37,7 @@ export class InterceptorService implements HttpInterceptor {
         },((error:any) => {
 
           // this.alertService.success(error.message, true);
-
+ 
         }));
       }
   }
