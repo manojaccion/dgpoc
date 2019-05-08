@@ -29,7 +29,8 @@ import { PaginatorModule } from 'primeng/paginator';
     TabViewModule,
     PaginatorModule
   ],
-  providers: [...serviceContainer],
+  providers: [...serviceContainer,
+    {provide:HTTP_INTERCEPTORS,useClass:InterceptorService,multi:true},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

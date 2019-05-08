@@ -41,6 +41,9 @@ export class AppComponent implements OnInit {
     }
 
     onRowEditSave(car: IAccount) {
+        car.newVal = true;
+        console.log('Car'+ JSON.stringify(car));
+        console.log('Car Model '+ JSON.stringify(this.cars2));
         if (car.year > 0) {
             delete this.clonedCars[car.vin];
             // this.messageService.add({severity:'success', summary: 'Success', detail:'Car is updated'});
@@ -57,5 +60,9 @@ export class AppComponent implements OnInit {
 
     paginate(evt){
         console.log('Paginator event: ' + evt);
+    }
+
+    save(){
+        console.log('Model Data : ' + JSON.stringify(this.cars2));
     }
 }
